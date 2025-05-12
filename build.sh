@@ -1,3 +1,3 @@
 set -e 
 
-gcc -o jfetch -Wall -Wextra jfetch.c
+gcc -o jfetch -Wall -Wextra -Wno-format-security src/jfetch.c
