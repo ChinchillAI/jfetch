@@ -23,19 +23,19 @@
         perSystem =
           { config, pkgs, ... }:
           {
-            packages.jarch = pkgs.stdenv.mkDerivation {
+            packages.jfetch = pkgs.stdenv.mkDerivation {
               pname = "jarch";
               version = "0.0.1";
               src = ./src;
               nativeBuildInputs = [ pkgs.gnumake ];
             };
 
-            apps.jarch = {
+            apps.jfetch = {
               type = "app";
-              program = "${config.packages.jarch}/bin/jfetch";
+              program = "${config.packages.jfetch}/bin/jfetch";
             };
 
-            devShells.jarch = pkgs.mkShell {
+            devShells.jfetch = pkgs.mkShell {
               packages = [ pkgs.stdenv ];
             };
           };
